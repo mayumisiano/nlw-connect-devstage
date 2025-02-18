@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechLibrary.Api", "TechLibrary.Api\TechLibrary.Api.csproj", "{E2EA02D9-63A2-4BC3-9C52-2C97D03B0319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechLibrary.Communication", "TechLibrary.Communication\TechLibrary.Communication.csproj", "{5EF184B5-A1F8-4E8A-8045-47A6C083C187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechLIbrary.Exceptions", "TechLIbrary.Exceptions\TechLIbrary.Exceptions.csproj", "{F8ACDFDC-6D6E-46C8-9C59-93A6CFEE9689}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2EA02D9-63A2-4BC3-9C52-2C97D03B0319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2EA02D9-63A2-4BC3-9C52-2C97D03B0319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2EA02D9-63A2-4BC3-9C52-2C97D03B0319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2EA02D9-63A2-4BC3-9C52-2C97D03B0319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF184B5-A1F8-4E8A-8045-47A6C083C187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF184B5-A1F8-4E8A-8045-47A6C083C187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF184B5-A1F8-4E8A-8045-47A6C083C187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF184B5-A1F8-4E8A-8045-47A6C083C187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8ACDFDC-6D6E-46C8-9C59-93A6CFEE9689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8ACDFDC-6D6E-46C8-9C59-93A6CFEE9689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8ACDFDC-6D6E-46C8-9C59-93A6CFEE9689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8ACDFDC-6D6E-46C8-9C59-93A6CFEE9689}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
