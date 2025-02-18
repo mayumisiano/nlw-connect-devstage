@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TechLibrary.Api.Domain.Entities;
 
-namespace TechLibrary.Api.Infrastructure;
+namespace TechLibrary.Api.Infrastructure.DataAccess;
 
 public class TechLibraryDbContext : DbContext
 {
@@ -9,6 +9,6 @@ public class TechLibraryDbContext : DbContext
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=/path/to/TechLibraryDb.db");
+        optionsBuilder.UseSqlite("Data Source=/Users/Paula_Siano/Downloads/TechLibraryDb.db");
     }
 }

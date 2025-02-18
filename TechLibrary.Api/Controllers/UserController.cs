@@ -10,34 +10,20 @@ namespace TechLibrary.Api.Controllers;
 [ApiController]
 public class UserController : ControllerBase
 {
+    private readonly RegisterUserUseCase _useCase;
+
+    public UserController(RegisterUserUseCase useCase)
+    {
+        _useCase = useCase;
+    }
+
     [HttpPost]
     [ProducesResponseType(typeof(ResponseRegisteredUserJson), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status400BadRequest)]
-    public IActionResult Create(RequestUserJson request)
+    public IActionResult Register(RequestUserJson request)
     {
-        try
-        {
-            var useCase = new RegisterUserUseCase();
-
-            var response = useCase.Execute(request);
-
-            return Created(string.Empty, response); 
-        }
-        catch (TechLibraryException e)
-        {
-            return BadRequest(new ResponseErrorMessagesJson
-            {
-                Errors = e.GetErrorMessages()
-            });
-        }
-        catch
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, new ResponseErrorMessagesJson
-            {
-                Errors = new List<string> { "Unexpected Error" }
-            });
-        }
-       
+        var response = _useCase.Execute(request);
+        return Created(string.Empty, response);
     }
 }
 

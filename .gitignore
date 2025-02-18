@@ -475,3 +475,10 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Sensitive configuration files
+appsettings.Production.json
+appsettings.Staging.json
+
+# Environment variables
+*.env
