@@ -6,6 +6,7 @@ namespace TechLibrary.Api.Infrastructure.DataAccess;
 public class TechLibraryDbContext : DbContext
 {
     public DbSet<User> Users { get; set; }
+    public DbSet<Book> Books { get; set; }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

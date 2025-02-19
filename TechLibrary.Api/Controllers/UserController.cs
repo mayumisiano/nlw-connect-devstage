@@ -2,28 +2,28 @@ using Microsoft.AspNetCore.Mvc;
 using TechLibrary.Api.UseCases.Users.Register;
 using TechLibrary.Communication.Requests;
 using TechLibrary.Communication.Responses;
-using TechLibrary.Exceptions;
 
-namespace TechLibrary.Api.Controllers;
+namespace TechLibrary.Api.Controllers
 
-[Route("api/[controller]")]
-[ApiController]
-public class UserController : ControllerBase
 {
-    private readonly RegisterUserUseCase _useCase;
-
-    public UserController(RegisterUserUseCase useCase)
+    [Route("[controller]")]
+    [ApiController]
+    public class UserController : ControllerBase
     {
-        _useCase = useCase;
-    }
+        private readonly RegisterUserUseCase _useCase;
 
-    [HttpPost]
-    [ProducesResponseType(typeof(ResponseRegisteredUserJson), StatusCodes.Status201Created)]
-    [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status400BadRequest)]
-    public IActionResult Register(RequestUserJson request)
-    {
-        var response = _useCase.Execute(request);
-        return Created(string.Empty, response);
+        public UserController(RegisterUserUseCase useCase)
+        {
+            _useCase = useCase;
+        }
+
+        [HttpPost]
+        [ProducesResponseType(typeof(ResponseRegisteredUserJson), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status400BadRequest)]
+        public IActionResult Register(RequestUserJson request)
+        {
+            var response = _useCase.Execute(request);
+            return Created(string.Empty, response);
+        }
     }
 }
-
