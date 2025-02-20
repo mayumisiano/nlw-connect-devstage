@@ -23,13 +23,13 @@ public class DoLoginUseCase
         var entity = dbContext.Users.FirstOrDefault(user => user.Email.Equals(request.Email));
         if (entity is null)
         {
-            throw new InvalidLoginException();
+            throw new InvalidLoginException("Invalid email or password");
         }
 
         var cryptography = new BCryptAlgorithm();
         var passwordIsValid = cryptography.Verify(request.Password, entity);
         if (passwordIsValid == false)
-            throw new InvalidLoginException();
+            throw new InvalidLoginException("Invalid email or password");
 
         var tokenGenerator = new JwtTokenGenerator(_configuration);
         
